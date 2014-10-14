@@ -1,0 +1,45 @@
+/*
+ *	Global variables
+ */
+
+body {
+	background-color: $color-bg;
+	color: #333;
+}
+
+
+/**
+ *	Layout
+ */
+
+// variables for global layout only
+$breakpoint_global_cow: 700px;
+$breakpoint_global_donkey: 500px;
+$breakpoint_global_chicken: 200px;
+
+
+%container,
+.container {
+	@extend %clearfix;
+
+	margin: 0 auto;
+	max-width: (980 / 14)+em;
+}
+
+.global-footer {
+	@include font-size(14);
+
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+
+	&__footnote {
+		padding: 10px $master-padding;
+
+		a {
+			color: #fff;
+		}
+	}
+}

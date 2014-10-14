@@ -1,0 +1,44 @@
+---
+layout: layout.hbs
+---
+
+<ul class="carousel cycle-slideshow auto"
+    data-cycle-fx=fade
+    data-cycle-timeout=4000
+    data-cycle-caption=".caption3"
+    data-cycle-caption-template="{{slideNum}} / 5"
+    data-cycle-loader=true
+    data-cycle-progressive="#slides"
+    data-cycle-slides=">li"
+>
+
+    <li class="carousel__item carousel__item--first">
+        <img src="{{ slides.0.img }}" alt="{{ slides.0.title }}">
+    </li>
+
+    <script id="slides" type="text/cycle" data-cycle-split="---">
+        {{#each slides }}
+            {{#isnt @index 0}}
+                <li class="carousel__item carousel__item--first">
+                    <img src="{{ img }}" alt="{{ title }}">
+                </li>
+                ---
+            {{/isnt }}
+        {{/each  }}
+    </script>
+
+</ul>
+
+<section class="card" id="about-us">
+
+    <h1>About us</h1>
+    <p>We're gangster. We're straight up&hellip; G</p>
+    <p>We like latin text, we find it funn&hellip; amusing</p>
+    <h2>Lorem ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, diam congue sit cu. Ea iriure ornatus disputationi qui, quis esse quodsi vim id. Ex eum pertinacia constituto, ei graeci alienum his. Pri ex minim regione torquatos, no hinc purto necessitatibus quo, et sea aperiri pertinax.</p>
+    <p>Nostrud offendit definitionem nec ea, at aeque omittantur vim. Ea nam quodsi dolores molestiae, soluta vocent option ad qui. Eum libris adipiscing ut, odio essent intellegebat an eos. Eruditi consequuntur mel te, cu ius volutpat maiestatis. Vim omnes singulis pericula in. Id eos natum audiam, et nam tation definitionem, nisl ludus id quo.</p>
+    <p>His eu detracto intellegebat, rebum facer affert at pri. An molestiae evertitur assentior eam, est dico nihil graecis in. Summo accusata elaboraret est te, cum te tation mollis. Ut laoreet nonumes pri, quo odio moderatius constituam at. Ne vocent aeterno saperet eam. Mel suas autem et.</p>
+
+    <a href="#" class="card__close-button">[x] Close</a>
+
+</section>

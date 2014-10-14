@@ -1,0 +1,33 @@
+/*
+*	Header
+*	Contains everything in the global header. Navigation-specific elements found in _navigation
+*/
+
+.global-header { }
+
+/* Logo */
+.global-logo {
+	position: absolute;
+	left: $master-padding;
+	margin: 0;
+	top: $master-padding;
+	z-index: 30;
+
+	a {
+		display: block;
+	}
+		img { // We should really have an SVG provided here, please
+			filter: brightness(666%);
+			height: 89px;
+			width: 149px;
+		}
+}
+	.global-logo__text {
+		display: block;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		position: absolute;
+		width: 0;
+		z-index: -1;
+	}

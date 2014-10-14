@@ -1,0 +1,36 @@
+/*
+ *	Typography
+ */
+
+body {
+	color: #333;
+	font-family: Georgia, serif;
+	font-size: $base-font-size;
+	line-height: 1.4;
+}
+
+/*
+ *	Headings
+ */
+
+h1 {
+	@include font-size(34);
+
+}
+h2 {
+	@include font-size(26);
+
+}
+
+
+/*
+ *	Links
+ */
+
+a {
+	color: #666;
+
+	&:hover {
+		color: darken(#fff, 20);
+	}
+}

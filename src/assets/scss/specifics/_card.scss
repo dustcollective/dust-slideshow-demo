@@ -1,0 +1,52 @@
+/**
+ *	Card
+ **/
+
+.card {
+	@include arrow( $direction: top, $size: 20px, $color: #fff, $center: 75%, $margin: 0, $pseudo: before );
+
+	background: #fff;
+	display: none;
+	max-height: 80%;
+	padding: $master-padding *2;
+	position: absolute;
+	right: $master-padding;;
+	top: $master-padding *5;
+	width: 80%;
+	max-width: 600px;
+	z-index: 2;
+
+	&__item {
+		@extend %list-reset;
+
+		display: none;
+		height: 100%;
+		width: 100%;
+
+		&--first {
+			display: block;
+		}
+
+		img {
+			min-height: 100%;
+			position: relative;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 100%;
+		}
+	}
+
+	h1:first-child {
+		margin-top: 0;
+	}
+
+	/* Navigation / closure */
+	&__close-button {
+		position: absolute;
+		right: $master-padding *2;
+		top: $master-padding *2;
+	}
+	&:target {
+		display: block;
+	}
+}
